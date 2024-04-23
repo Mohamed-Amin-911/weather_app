@@ -56,14 +56,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Container(
                     width: double.infinity,
                     height: double.infinity,
-                    color: const Color.fromARGB(255, 0, 93, 151),
+                    color: Colors.white,
                     child: const Center(
                       child: Text(
-                        "No city yet",
+                        "search for a city",
                         style: TextStyle(
-                            fontSize: 50,
-                            color: Color.fromARGB(130, 255, 255, 255),
-                            fontWeight: FontWeight.bold),
+                            fontSize: 30,
+                            color: Color.fromARGB(255, 54, 55, 149),
+                            fontWeight: FontWeight.w300),
                       ),
                     ),
                   ));
@@ -71,15 +71,28 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             Container(
-              margin: const EdgeInsets.only(top: 300),
+              margin: const EdgeInsets.only(top: 640),
               width: double.infinity,
               height: double.infinity,
               decoration: const BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                Color.fromARGB(255, 54, 55, 149),
-                Color.fromARGB(255, 54, 55, 149),
-                Color.fromARGB(0, 0, 93, 151)
-              ], begin: Alignment.bottomCenter, end: Alignment.topCenter)),
+                boxShadow: [
+                  BoxShadow(
+                      color: Color.fromARGB(184, 0, 0, 0),
+                      blurRadius: 20,
+                      offset: Offset(0, 2),
+                      spreadRadius: 2)
+                ],
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30)),
+                color: Color.fromARGB(255, 54, 55, 149),
+
+                //     gradient: LinearGradient(colors: [
+                //   Color.fromARGB(255, 54, 55, 149),
+                //   Color.fromARGB(255, 54, 55, 149),
+                //   Color.fromARGB(0, 0, 93, 151)
+                // ], begin: Alignment.bottomCenter, end: Alignment.topCenter)
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 50, left: 20, right: 10),
